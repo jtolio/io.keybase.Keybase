@@ -11,7 +11,8 @@ This package is not on the official flathub, so you'll have to download, build, 
 Clone the git repo, and then run:
 
 ```
-flatpak-builder --user --install --force-clean builddir io.keybase.Keybase.yml
+flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak-builder --user --install --force-clean builddir --install-deps-from=flathub io.keybase.Keybase.yml
 ```
 
 Now you can run it like any other flatpak.
